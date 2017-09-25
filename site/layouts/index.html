@@ -1,17 +1,8 @@
-{{ define "main" }}
-{{ if not .Site.Params.about.hide }}
-  {{ partial "about" . }}
-{{ end }}
-
-{{ if not .Site.Params.portfolio.hide }}
-  {{ partial "portfolio" . }}
-{{ end }}
-
-{{ if not .Site.Params.recentposts.hide }}
-  {{ partial "recent-posts" . }}
-{{ end }}
-
-{{ if not .Site.Params.contact.hide }}
-  {{ partial "contact" . }}
-{{ end }}
-{{ end }}
+{{ partial "header.html" . }}
+<main>
+  {{ range first 5 (where .Site.Pages "Type" "post") }}
+    {{ partial "summary.html" . }}
+  {{ end }}
+</main>
+{{ partial "sidebar.html" . }}
+{{ partial "footer.html" . }}

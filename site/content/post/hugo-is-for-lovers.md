@@ -1,11 +1,7 @@
-+++
-banner = "banners/placeholder.png"
-categories = ["Lorem"]
-date = "2015-08-03T13:39:46+02:00"
-menu = ""
-tags = []
-title = "Hugo is for lovers"
-+++
+---
+title: Hugo is for lovers and you too!
+date: '2015-08-03T13:39:46+02:00'
+---
 
 ## Step 1. Install Hugo
 
